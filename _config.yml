@@ -1,6 +1,6 @@
 # Site settings
 title:          Rethinking Bayes
-description:    "Problem set solutions in Python for the book Statistical Rethinking: A Bayesian Course with Examples in R and Stan, by Richard McElreath"
+description:    "Exercise solutions in Python for the book Statistical Rethinking: A Bayesian Course with Examples in R and Stan, by Richard McElreath"
 baseurl:        "/RethinkingBayes"
 url:            "https://philipgriffith.github.io"
 
