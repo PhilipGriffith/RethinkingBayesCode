@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Resources"
+title: Resources
 permalink: /resources/
 ---
 
@@ -37,11 +37,17 @@ Documentation for the PyMC3 library.
 
 [Jeffrey Girard's website](https://jmgirard.com/statistical-rethinking-ch2/){:target="_blank"}
 <br>
-With thoughtful answers throughout, this is one of the most helpful sites for checking both your solutions and understanding as you work through the chapter exercises.
+With thoughtful answers throughout, this is one of the most helpful sites for checking both your solutions and your understanding as you work through the chapter exercises.
 
 [Gabriel B.C.'s website](https://github.com/gbosquechacon/statrethink_course_in_pymc3){:target="_blank"}
 <br>
 An awesome site that works through PyMC3 solutions to the homework exercises assigned during the Winter 2019 Statistical Rethinking course.
+
+## The Site
+
+[_Rethinking Bayes_ Github site](https://github.com/PhilipGriffith/RethinkingBayes)
+<br>
+All of the code for this website can be found here.
 
 <br>
 <br>
