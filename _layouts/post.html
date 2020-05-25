@@ -3,19 +3,19 @@ layout: default
 ---
 
 <div class="post">
-  <div class="post-info">
+	<div class="post-info">
 
-    {% if page.author %}
+	{% if page.author %}
 		<span>Written by</span>
-        {{ page.author }}
-    {% endif %}
+		{{ page.author }}
+	{% endif %}
 
-  </div>
+	</div>
 
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-line"></div>
+	<h1 class="post-title">{{ page.title }}</h1>
+	<div class="post-line"></div>
 
-  {{ content }}
+	{{ content }}
 
 </div>
 
@@ -24,12 +24,11 @@ layout: default
 {% endif %}
 
 <div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
-  {% endif %}
-
-  <a href="#" class="top">Top</a>
+	{% if page.next.url %}
+	<a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+	{% endif %}
+	{% if page.previous.url %}
+	<a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+	{% endif %}
+	<a href="#" class="top">Top</a>
 </div>

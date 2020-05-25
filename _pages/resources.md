@@ -45,7 +45,7 @@ An awesome site that works through PyMC3 solutions to the homework exercises ass
 
 ## The Site
 
-[_Rethinking Bayes_ Github site](https://github.com/PhilipGriffith/RethinkingBayes)
+[_Rethinking Bayes_ Github site](https://github.com/PhilipGriffith/RethinkingBayes){:target="_blank"}
 <br>
 All of the code for this website can be found here.
 
