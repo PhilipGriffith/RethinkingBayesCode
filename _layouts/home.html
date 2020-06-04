@@ -6,8 +6,15 @@ layout: default
   {% for post in paginator.posts %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
       <div>
+		{% if post.type == "Overview" %}
         <h1 class="catalogue-title">{{ post.title }}</h1>
-        <div class="catalogue-line"></div>
+		<div class="catalogue-line"></div>
+		{% else %}
+		<div class="exercise-padding">
+		<h1 class="catalogue-title exercise">{{ post.type }} Exercises</h1>
+		<div class="catalogue-line exercise"></div>
+		</div>
+		{% endif %}
       </div>
     </a>
   {% endfor %}
