@@ -7,3 +7,4 @@ Gemfile.lock
 .jekyll-cache
 .ipynb_checkpoints
 .idea
+*.odg
