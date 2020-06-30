@@ -1,38 +1,35 @@
 # Site settings
-title:          Rethinking Bayes
-description:    "Exercise solutions in Python for the book Statistical Rethinking: A Bayesian Course with Examples in R and Stan, by Richard McElreath"
-baseurl:        "/RethinkingBayes"
-url:            "https://philipgriffith.github.io"
+title: Rethinking Bayes
+description: "Exercise solutions in Python for the book Statistical Rethinking: A Bayesian Course with Examples in R and Stan, by Richard McElreath"
+baseurl: "/RethinkingBayes"
+url: "https://philipgriffith.github.io"
 
 # Author
 author:
-  name:         Philip Griffith
-  url:          https://github.com/PhilipGriffith
-  email:        philip.griffith@gmail.com
+  name: Philip Griffith
+  url: https://github.com/PhilipGriffith
+  email: philip.griffith@gmail.com
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 include:
   - _pages
 
 # Assets
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  sass_dir: _sass
+  style: compressed
 
-# Gems
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+  - jekyll-sitemap
   - jekyll-seo-tag
-  # - jemoji #Uncomment this to allow emoji in your post
+  - jekyll-paginate-v2
 
-# Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
+pagination:
+  enabled: true
+  per_page: 5
+  limit: 0
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock ]
-
-# Disqus (Set to your disqus id)
-#disqus:         jekyll-tale

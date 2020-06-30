@@ -2,11 +2,15 @@
 
 source "https://rubygems.org"
 
-gem 'github-pages'
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+gem 'jekyll', '~> 3.0'
 
 group :jekyll_plugins do
-  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-  gem "jekyll-paginate", "~> 1.1"
-  gem "jekyll-feed", "~> 0.10"
-  gem "jekyll-seo-tag", "~> 2.5"
+  gem 'jekyll-sitemap'
+  gem 'jekyll-feed'
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-paginate-v2'
 end
+
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
