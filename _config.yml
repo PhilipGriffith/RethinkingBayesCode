@@ -32,4 +32,7 @@ pagination:
   limit: 0
 
 # Excludes
-exclude: [ Gemfile, Gemfile.lock ]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Notebooks/
