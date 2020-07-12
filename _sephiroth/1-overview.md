@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "1. The Golem of Prague"
-order: 1
+date: 2000-12-31
 ---
 
 # Overview

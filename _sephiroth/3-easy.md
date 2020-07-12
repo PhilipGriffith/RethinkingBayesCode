@@ -1,8 +1,7 @@
 ---
 layout: page
 title: "3. Sampling the Imaginary"
-type: Easy
-order: 2
+date: 2000-12-25
 ---
 
 # Easy

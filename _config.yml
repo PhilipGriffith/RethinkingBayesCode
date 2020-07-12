@@ -31,7 +31,8 @@ plugins:
 pagination:
   enabled: true
   per_page: 5
-  collection: sephiroth
+  collection: malkuth
+  sort_field: title
 
 collections:
   malkuth:
@@ -39,7 +40,7 @@ collections:
     permalink: '/malkuth/:name'
   sephiroth:
     output: true
-    permalink: '/sephiroth/:name'
+    permalink: '/sephiroth/:name'    
 
 # Excludes
 exclude:

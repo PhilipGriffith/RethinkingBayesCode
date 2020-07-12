@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "2. Small Worlds and Large Worlds"
-order: 4
+date: 2000-12-27
 use_math: true
 ---
 

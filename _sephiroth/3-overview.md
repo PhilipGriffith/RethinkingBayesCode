@@ -1,8 +1,7 @@
 ---
 layout: page
 title: "3. Sampling the Imaginary"
-type: Overview
-order: 1
+date: 2000-12-26
 ---
 
 # Overview

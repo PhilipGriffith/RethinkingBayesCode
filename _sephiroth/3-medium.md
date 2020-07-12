@@ -1,8 +1,7 @@
 ---
 layout: page
 title: "3. Sampling the Imaginary"
-type: Medium
-order: 3
+date: 2000-12-24
 ---
 
 # Medium

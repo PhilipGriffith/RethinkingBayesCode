@@ -1,8 +1,7 @@
 ---
 layout: page
 title: "3. Sampling the Imaginary"
-type: Hard
-order: 4
+date: 2000-12-23
 ---
 
 # Hard
