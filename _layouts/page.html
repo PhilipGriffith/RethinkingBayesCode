@@ -3,14 +3,13 @@ layout: default
 ---
 
 <div class="post">
-	<div class="post-info">
 
 	{% if page.author %}
+	<div class="post-info">
 		<span>Written by</span>
 		{{ page.author }}
-	{% endif %}
-
 	</div>
+	{% endif %}
 
 	<h1 class="post-title">{{ page.title }}</h1>
 	<div class="post-line"></div>
@@ -18,10 +17,6 @@ layout: default
 	{{ content }}
 
 </div>
-
-{% if page.comments %}
-  {% include disqus_comments.html %}
-{% endif %}
 
 <div class="pagination">
 	{% if page.next.url %}

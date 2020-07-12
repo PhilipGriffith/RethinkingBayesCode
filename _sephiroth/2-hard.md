@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: page
 title: "2. Small Worlds and Large Worlds"
-type: Hard
+order: 4
 use_math: true
 ---
 

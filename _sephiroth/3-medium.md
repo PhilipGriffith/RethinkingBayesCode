@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: page
 title: "3. Sampling the Imaginary"
 type: Medium
+order: 3
 ---
 
 # Medium

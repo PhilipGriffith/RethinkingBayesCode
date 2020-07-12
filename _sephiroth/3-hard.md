@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: page
 title: "3. Sampling the Imaginary"
 type: Hard
+order: 4
 ---
 
 # Hard

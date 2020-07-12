@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: page
 title: "3. Sampling the Imaginary"
 type: Overview
+order: 1
 ---
 
 # Overview

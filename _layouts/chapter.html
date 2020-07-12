@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="catalogue">
+	<h1 class="catalogue-item catalogue-title">{{ page.title }}</h1>
+    <a href="{{ site.baseurl | append: '/sephiroth/' | append: page.chapter | append: '-overview' }}" class="catalogue-item">
+      <div>
+        <h1 class="catalogue-title">Overview</h1>
+		<div class="catalogue-line"></div>
+      </div>
+    </a>
+	{% if page.chapter != 1 and page.chapter != 9 %}
+	<a href="{{ site.baseurl | append: '/sephiroth/' | append: page.chapter | append: '-easy' }}" class="catalogue-item">
+      <div>
+        <h1 class="catalogue-title">Easy Exercises</h1>
+		<div class="catalogue-line"></div>
+      </div>
+    </a>
+	<a href="{{ site.baseurl | append: '/sephiroth/' | append: page.chapter | append: '-medium' }}" class="catalogue-item exercise">
+      <div>
+        <h1 class="catalogue-title">Medium Exercises</h1>
+		<div class="catalogue-line exercise"></div>
+      </div>
+    </a>
+	<a href="{{ site.baseurl | append: '/sephiroth/' | append: page.chapter | append: '-hard' }}" class="catalogue-item">
+      <div>
+        <h1 class="catalogue-title">Hard Exercises</h1>
+		<div class="catalogue-line"></div>
+      </div>
+    </a>
+	{% endif %}
+</div>

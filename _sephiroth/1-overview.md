@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: page
 title: "1. The Golem of Prague"
-type: Overview
+order: 1
 ---
 
 # Overview
