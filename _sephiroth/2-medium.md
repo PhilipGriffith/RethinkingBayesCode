@@ -38,11 +38,11 @@ def compute_grid_approximation(prior, success=6, tosses=9):
 			The default is 9.
 	Returns: 
 		p_grid: np.array
-			An evenly-spaced grid between 0 and 1.
+			An evenly-spaced parameter grid between 0 and 1.
 		posterior: np.array
 			The posterior distribution.
 	"""
-	# First, define the grid
+	# First, define the parameter grid
 	p_grid = np.linspace(0, 1, prior.shape[0])
 	# Then compute the likelihood at each point in the grid
 	likelihood = stats.binom.pmf(success, tosses, p_grid)
@@ -55,13 +55,17 @@ def compute_grid_approximation(prior, success=6, tosses=9):
 
 def plot_grid_approximation(p_grid, posterior, success, tosses, x_label):
     """
-        This function plots a grid approximation of the posterior distribution.
+    This function plots a grid approximation of the posterior distribution.
     """
     plt.plot(p_grid, posterior, 'o-', label=f'Success = {success}\nTosses = {tosses}')
     plt.xlabel(x_label)
     plt.ylabel('Posterior Probability')
     plt.legend(loc=0)
 {% endhighlight %}
+
+[`Documentation for np.linspace`](https://numpy.org/doc/stable/reference/generated/numpy.linspace.html){:target="_blank"}
+<br>
+[`Documentation for stats.binom.pmf`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html){:target="_blank"}
 
 You'll notice that the `grid_approximation` function is very similar to that in the R code 2.3 box found on p. 40 of _Statistical Rethinking_.
 <hr>
@@ -75,8 +79,8 @@ You'll notice that the `grid_approximation` function is very similar to that in 
 * 3) L, W, W, L, W, W, W
 
 {% highlight python %}
-# Create a prior distribution of 20 1's as in Fig 2.7 on pg. 41.
-# This will also create a posterior distribution with 20 points.
+# Create a prior distribution of 20 1's as in Fig 2.7 on pg. 41
+# This will also create a posterior distribution with 20 points
 prior = np.ones(20)
 x_label = 'Probability of Water'
 # 1) W, W, W
@@ -89,6 +93,8 @@ plot_grid_approximation(pg, po, s, t, x_label)
 pg, po, s, t = compute_grid_approximation(prior, success=5, tosses=7)
 plot_grid_approximation(pg, po, s, t, x_label)
 {% endhighlight %}
+
+[`Documentation for np.ones`](https://numpy.org/doc/stable/reference/generated/numpy.ones.html){:target="_blank"}
 
 ![2M1]({{ site.baseurl }}/assets/images/2m1.jpg "2M1")
 
@@ -112,6 +118,8 @@ plot_grid_approximation(pg, po, s, t, x_label)
 pg, po, s, t = compute_grid_approximation(prior, 5, 7)
 plot_grid_approximation(pg, po, s, t, x_label)
 {% endhighlight %}
+
+[`Documentation for np.where`](https://numpy.org/doc/stable/reference/generated/numpy.where.html){:target="_blank"}
 
 ![2M2]({{ site.baseurl }}/assets/images/2m2.jpg "2M2")
 
