@@ -16,7 +16,7 @@ include:
   - _pages
 destination: ../Site/
 keep_files:
-  - .git/
+  - ../Site/.git/
 
 # Assets
 sass:
