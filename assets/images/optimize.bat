@@ -1,0 +1,1 @@
+for %%v in (*.png) do D:/Projects/RethinkingBayes/Source/assets/images/optipng.exe -dir new %%v

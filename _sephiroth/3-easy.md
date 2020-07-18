@@ -101,7 +101,7 @@ plot_interval(samples, right=0.2)
 {% endhighlight %}
 [`Documentation for np.mean`](https://numpy.org/doc/stable/reference/generated/numpy.mean.html){:target="_blank"}
 
-**<center>p = 0.001</center>**
+**<center>0.1% lies below 0.2</center>**
 
 ![3E1]({{ site.baseurl }}/assets/images/3e1.png "3E1")
 
@@ -114,7 +114,7 @@ np.mean(samples > 0.8)
 plot_interval(samples, left=0.8)
 {% endhighlight %}
 
-**<center>p = 0.119</center>**
+**<center>11.9% lies above 0.8</center>**
 
 ![3E2]({{ site.baseurl }}/assets/images/3e2.png "3E2")
 
@@ -127,7 +127,7 @@ np.mean((samples > 0.2) & (samples < 0.8))
 plot_interval(samples, left=0.2, right=0.8)
 {% endhighlight %}
 
-**<center>p = 0.88</center>**
+**<center>88% lies between 0.2 and 0.8</center>**
 
 ![3E3]({{ site.baseurl }}/assets/images/3e3.png "3E3")
 
@@ -153,7 +153,7 @@ This is equivalent to asking the value of p that lies below 80%.
 
 {% highlight python %}
 value = np.percentile(samples, 100-20)
-plot_interval(samples, right=value)
+plot_interval(samples, left=value)
 {% endhighlight %}
 
 **<center>p = 0.758</center>**

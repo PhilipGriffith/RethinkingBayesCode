@@ -16,7 +16,7 @@ include:
   - _pages
 destination: ../Site/
 keep_files:
-  - ../Site/.git/
+  - .git
 
 # Assets
 sass:
@@ -46,4 +46,6 @@ collections:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - Notebooks/
+  - Notebooks
+  - assets/images/optipng.exe
+  - assets/images/optimize.bat

@@ -6,6 +6,19 @@ date: 2000-12-24
 
 # Medium
 
+We'll use this helper function to visualize the results of the posterior probability checks:
+
+{% highlight python %}
+def plot_ppc(ppc, value):
+    fig, ax = plt.subplots()
+    ax.axvspan(value - 0.5, value + 0.5, facecolor='grey', alpha=0.35)
+    ax.hist(ppc, bins=100)
+    plt.xlabel('# of Water Observations')
+    plt.ylabel('Frequency')
+{% endhighlight %}
+
+<hr>
+
 **3M1.** Suppose the globe tossing data had turned out to be 8 water in 15 tosses. Construct the posterior distribution, using grid approximation. Use the same flat prior as before.
 
 {% highlight python %}
@@ -14,6 +27,8 @@ size = 1000
 prior = np.ones(size)
 pg, po, s, t = compute_grid_approximation(prior, success=8, tosses=15)
 plt.plot(pg, po)
+plt.xlabel('Probability of Water')
+plt.ylabel('Density')
 {% endhighlight %}
 
 ![3M1]({{ site.baseurl }}/assets/images/3m1.png "3M1")
@@ -24,10 +39,13 @@ plt.plot(pg, po)
 
 {% highlight python %}
 samples = np.random.choice(pg, p=po, size=10000, replace=True)
-az.hdi(samples, hdi_prob=0.9)
+values = az.hdi(samples, hdi_prob=0.9)
+plot_interval(samples, left=values[0], right=values[1])
 {% endhighlight %}
 
-**p = [0.329, 0.712]**
+**<center>The 90% HDPI for p = [0.329, 0.712]</center>**
+
+![3M2]({{ site.baseurl }}/assets/images/3m2.png "3M2")
 
 <hr>
 
@@ -36,10 +54,13 @@ az.hdi(samples, hdi_prob=0.9)
 {% highlight python %}
 ppc = stats.binom.rvs(n=15, p=samples, size=10000)
 np.mean(ppc == 8)
+plot_ppc(ppc, 8)
 {% endhighlight %}
 [`Documentation for stats.binom.rvs`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html){:target="_blank"}
 
-**p = 0.144**
+**<center>p = 0.144</center>**
+
+![3M3]({{ site.baseurl }}/assets/images/3m3.png "3M3")
 
 <hr>
 
@@ -48,10 +69,62 @@ np.mean(ppc == 8)
 {% highlight python %}
 ppc = stats.binom.rvs(n=9, p=samples, size=10000)
 np.mean(ppc == 6)
+plot_ppc(ppc, 6)
 {% endhighlight %}
+[`Documentation for stats.binom.rvs`](https://numpy.org/doc/stable/reference/generated/numpy.percentile.html){:target="_blank"}
 
-**p = 0.177**
+**<center>p = 0.177</center>**
+
+![3M4]({{ site.baseurl }}/assets/images/3m4.png "3M4")
 
 <hr>
 
 **3M5.** Start over at 3M1, but now use a prior that is zero below p = 0.5 and a constant above p = 0.5. This corresponds to prior information that a majority of the Earth’s surface is water. Repeat each problem above and compare the inferences. What difference does the better prior make? If it helps, compare inferences (using both priors) to the true value p = 0.7.
+
+{% highlight python %}
+size = 1000
+prior = np.where(np.linspace(start=0, stop=1, num=size) < 0.5, 0, 1)
+pg, po, s, t = compute_grid_approximation(prior, success=8, tosses=15)
+plt.plot(pg, po)
+plt.xlabel('Probability of Water')
+plt.ylabel('Density')
+{% endhighlight %}
+
+![3M5a]({{ site.baseurl }}/assets/images/3m5a.png "3M5a")
+
+{% highlight python %}
+samples = np.random.choice(pg, p=po, size=10000, replace=True)
+values = az.hdi(samples, hdi_prob=0.9)
+plot_interval(samples, left=values[0], right=values[1])
+{% endhighlight %}
+
+**<center>The 90% HDPI for p = [0.501, 0.711]</center>**
+
+Because the new prior assumes that values below 0.5 are impossible, the left interval now begins at that value. Despite this prior, the greatest density of the posterior distribution still falls below a value of approximately 70%, given the data.
+
+![3M5b]({{ site.baseurl }}/assets/images/3m5b.png "3M5b")
+
+{% highlight python %}
+ppc = stats.binom.rvs(n=15, p=samples, size=10000)
+np.mean(ppc == 8)
+plot_ppc(ppc, 8)
+{% endhighlight %}
+
+**<center>p = 0.156</center>**
+
+Because the new prior gives higher probabilities to values above 0.5, the probability of observing eight waters in fifteen tosses has grown, though only very slightly. More noticeable is that observing more than or fewer than eight waters has grown more and less probable, respectively.
+
+![3M5c]({{ site.baseurl }}/assets/images/3m5c.png "3M5c")
+
+{% highlight python %}
+ppc = stats.binom.rvs(n=9, p=samples, size=10000)
+np.mean(ppc == 6)
+plot_ppc(ppc, 6)
+{% endhighlight %}
+
+**<center>p = 0.231</center>**
+
+The same probabilistic shift towards higher values influences this inference, but, because there is less data than before, the prior plays a larger role in determining the shape of the posterior, and therefore the probability of observing six waters in nine tosses shows a more pronounced increase.
+
+![3M5d]({{ site.baseurl }}/assets/images/3m5d.png "3M5d")
+
