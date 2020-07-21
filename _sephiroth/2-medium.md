@@ -24,34 +24,34 @@ Moreover, whenever an exercise calls for a grid approximation of the posterior d
 
 {% highlight python %}
 def compute_grid_approximation(prior, success=6, tosses=9):
-	"""
-	Parameters:
-		prior: np.array
-			A distribution representing our state of knowledge
-			before seeing the data. The number of items
-			should be the same as the number of grid points.
-		success: integer
-			Number of successes.
-			The default is 6.
-		tosses: integer
-			Number of tosses (i.e. successes + failures).
-			The default is 9.
-	Returns: 
-		p_grid: np.array
-			An evenly-spaced parameter grid between 0 and 1.
-		posterior: np.array
-			The posterior distribution.
-	"""
-	# First, define the parameter grid
-	p_grid = np.linspace(0, 1, prior.shape[0])
-	# Then compute the likelihood at each point in the grid
-	likelihood = stats.binom.pmf(success, tosses, p_grid)
-	# Compute the product of the likelihood and the prior
-	unstd_posterior = likelihood * prior
-	# Finally, standardize the posterior so that it sums to 1
-	posterior = unstd_posterior / unstd_posterior.sum()
+    """
+    Parameters:
+        prior: np.array
+            A distribution representing our state of knowledge
+            before seeing the data. The number of items
+            should be the same as the number of grid points.
+        success: integer
+            Number of successes.
+            The default is 6.
+        tosses: integer
+            Number of tosses (i.e. successes + failures).
+            The default is 9.
+    Returns: 
+        p_grid: np.array
+            An evenly-spaced parameter grid between 0 and 1.
+        posterior: np.array
+            The posterior distribution.
+    """
+    # First, define the parameter grid
+    p_grid = np.linspace(0, 1, prior.shape[0])
+    # Then compute the likelihood at each point in the grid
+    likelihood = stats.binom.pmf(success, tosses, p_grid)
+    # Compute the product of the likelihood and the prior
+    unstd_posterior = likelihood * prior
+    # Finally, standardize the posterior so that it sums to 1
+    posterior = unstd_posterior / unstd_posterior.sum()
 
-	return p_grid, posterior, success, tosses
+    return p_grid, posterior, success, tosses
 
 def plot_grid_approximation(p_grid, posterior, success, tosses, x_label):
     """
