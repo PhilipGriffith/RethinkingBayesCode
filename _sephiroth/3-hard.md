@@ -74,9 +74,9 @@ ppc = stats.binom.rvs(n=200, p=samples, size=10000)
 plot_ppc(ppc, vline=boys, xvar=var)
 {% endhighlight %}
 
-It appears that the model fits the data well, as the number of observed boy births is a central, likely outcome in the model's simulated data.
-
 ![3H3]({{ site.baseurl }}/assets/images/3h3.png "3H3")
+
+It appears that the model fits the data well, as the number of observed boy births is a central, likely outcome in the model's simulated data.
 
 <hr>
 
@@ -90,9 +90,9 @@ ppc = stats.binom.rvs(n=100, p=samples, size=10000)
 plot_ppc(ppc, vline=boys_1, xvar=var)
 {% endhighlight %}
 
-It's clear that the model overestimates the number of boy births when attempting to recreate the `birth1` dataset, though the actual number of observations still lies within a relatively dense area of the predictions. It's uncertain whether this discrepancy is due to a misspecified model or to the vicissitudes of the `birth1` dataset, but providing a more informative prior, gathering more data and looking at the posterior in different ways could help determine which is most likely.
-
 ![3H4]({{ site.baseurl }}/assets/images/3h4.png "3H4")
+
+It's clear that the model overestimates the number of boy births when attempting to recreate the `birth1` dataset, though the actual number of observations still lies within a relatively dense area of the predictions. It's uncertain whether this discrepancy is due to a misspecified model or to the vicissitudes of the `birth1` dataset, but providing a more informative prior, gathering more data and looking at the posterior in different ways could help determine which is most likely.
 
 <hr>
 
@@ -107,8 +107,8 @@ ppc = stats.binom.rvs(n=girls_1, p=samples, size=10000)
 plot_ppc(ppc, vline=girl1_boy2, xvar=var)
 {% endhighlight %}
 
+![3H5]({{ site.baseurl }}/assets/images/3h5.png "3H5")
+
 Here we can see that something has gone terribly wrong: the model severely underestimates the number of boy births following girl births. Given that the model assumes that the two datasets are independent, this is reason to believe that they, in fact, are not.
 
 Due to the size of the datasets, we still cannot rule out that this result is due to nothing more than randomness, though that possibility seems to be much less likely now than before. Instead, any number of biological, historical and cultural factors become potential explanations.
-
-![3H5]({{ site.baseurl }}/assets/images/3h5.png "3H5")
