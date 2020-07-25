@@ -4,7 +4,7 @@ title: "3. Sampling the Imaginary"
 date: 2000-12-24
 ---
 
-# Medium
+# Medium.
 
 We'll use this helper function to visualize the results of the posterior probability checks:
 

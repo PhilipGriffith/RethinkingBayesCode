@@ -5,7 +5,7 @@ date: 2000-12-29
 use_math: true
 ---
 
-# Easy
+# Easy.
 
 For some of the questions below, we'll use the [Kolmogorov definition of conditional probability](https://en.wikipedia.org/wiki/Conditional_probability){:target="_blank"}:
 
@@ -27,10 +27,10 @@ $$ \frac{Pr(A, B)}{Pr(B)} = Pr(A \mid B) \tag{K} \label{K} $$
 
 	* _The probability it's Monday, given that it's raining_.
 ^
-* 4) $\mathbf{\frac{Pr(rain, Monday)}{Pr(Monday)}}$
+* 4) $\mathbf{\frac{Pr(rain, \, Monday)}{Pr(Monday)}}$
 
 	* By substituting the concepts for the variables in $\eqref{K}$, we get:
-		* $\frac{Pr(rain, Monday)}{Pr(Monday)} = Pr(rain \mid Monday)$
+		* $\frac{Pr(rain, \, Monday)}{Pr(Monday)} = Pr(rain \mid Monday)$
 	* We can now see that (4) is equivalent to (2).
 
 <hr>
@@ -73,17 +73,17 @@ $$ \frac{Pr(A, B)}{Pr(B)} = Pr(A \mid B) \tag{K} \label{K} $$
 		* $Pr(rain \mid Monday) \cdot Pr(Monday) = Pr(rain, Monday)$
 	* We can now see that (3) is _the probability that it's raining and that it's Monday_.	
 ^
-* 4) $\mathbf{\frac{Pr(rain \mid Monday) \cdot Pr(Monday)}{Pr(rain)}}$
+* 4) $\mathbf{\frac{Pr(rain \mid Monday) \, Pr(Monday)}{Pr(rain)}}$
 
 	* Given what we learned in (3), we know that:
 		* $Pr(rain \mid Monday) \cdot Pr(Monday) = Pr(rain, Monday)$
 	* And so we can simplify (4) through substitution and rearrange to get:
-		* $\frac{Pr(rain, Monday)}{Pr(rain)} = \frac{Pr(Monday, rain)}{Pr(rain)}$
+		* $\frac{Pr(rain, \, Monday)}{Pr(rain)} = \frac{Pr(Monday, \, rain)}{Pr(rain)}$
 	* Given $\eqref{K}$, we know that:
-		* $\frac{Pr(Monday, rain)}{Pr(rain)} = Pr(Monday \mid rain)$
+		* $\frac{Pr(Monday, \, rain)}{Pr(rain)} = Pr(Monday \mid rain)$
 	* We can now see that (4) is equivalent to (1).
 ^
-* 5) $\frac{Pr(Monday \mid rain) \cdot Pr(rain)}{Pr(Monday)}$
+* 5) $\frac{Pr(Monday \mid rain) \, Pr(rain)}{Pr(Monday)}$
 
 	* This has the same structure as (4), but the concepts have switched places.
 	* This implies that (5) is the opposite of (4): _the probability of rain, given that it's Monday_.

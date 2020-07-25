@@ -16,6 +16,10 @@ _Why statistics can't save bad science_
 
 	* 3.2.1 Intervals of defined boundaries
 
+		* _Counting with `sum`_
+
+		* 
+
 	* 3.2.2 Intervals of defined mass
 
 		* _Why 95%?_
@@ -38,8 +42,8 @@ _Why statistics can't save bad science_
 
 		* 3.3.2.2 Is the model adequate?
 
-		* _What does more extreme mean?_
+			* _What does more extreme mean?_
 
-		* 
+			* 
 
 * 3.4 Summary

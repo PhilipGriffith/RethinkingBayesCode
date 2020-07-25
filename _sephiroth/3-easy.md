@@ -4,7 +4,7 @@ title: "3. Sampling the Imaginary"
 date: 2000-12-25
 ---
 
-# Easy
+# Easy.
 
 The code used to answer the questions below relies on these Python libraries:
 

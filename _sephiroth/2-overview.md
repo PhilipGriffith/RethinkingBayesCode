@@ -52,6 +52,8 @@ _Fast and frugal in the large world_
 
 	* 2.3.1 Likelihood
 
+		* _Names and probability distributions_
+
 		* _A central role for likelihood_
 
 		* 
@@ -63,6 +65,8 @@ _Fast and frugal in the large world_
 		* 
 
 	* 2.3.3 Prior
+
+		* _Prior as probability distribution_
 
 		* _Prior, prior pants on fire_
 
@@ -79,10 +83,16 @@ _Fast and frugal in the large world_
 	* _How you fit the model is part of the model_
 	
 	* 2.4.1 Grid approximation
-	
+
+		* _Vectorization_
+
+		* 
+
 	* 2.4.2 Quadratic approximation
 	
 		* _Maximum likelihood estimation_
+
+		* _The Hessians are coming_
 
 		* 
 

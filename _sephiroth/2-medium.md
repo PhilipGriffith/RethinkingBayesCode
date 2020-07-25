@@ -5,7 +5,7 @@ date: 2000-12-28
 use_math: true
 ---
 
-# Medium
+# Medium.
 
 The code used to answer some of the questions below relies on these Python libraries:
 

@@ -4,7 +4,7 @@ title: "3. Sampling the Imaginary"
 date: 2000-12-23
 ---
 
-# Hard
+# Hard.
 
 The practice problems here all use the data below. These data indicate the gender (male=1, female=0) of officially reported first and second born children in 100 two-child families.
 
