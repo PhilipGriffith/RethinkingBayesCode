@@ -73,7 +73,7 @@ $$ \frac{Pr(A, B)}{Pr(B)} = Pr(A \mid B) \tag{K} \label{K} $$
 		* $Pr(rain \mid Monday) \cdot Pr(Monday) = Pr(rain, Monday)$
 	* We can now see that (3) is _the probability that it's raining and that it's Monday_.	
 ^
-* 4) $\mathbf{\frac{Pr(rain \mid Monday) \, Pr(Monday)}{Pr(rain)}}$
+* 4) $\mathbf{\frac{Pr(rain \mid Monday) \cdot Pr(Monday)}{Pr(rain)}}$
 
 	* Given what we learned in (3), we know that:
 		* $Pr(rain \mid Monday) \cdot Pr(Monday) = Pr(rain, Monday)$
@@ -83,7 +83,7 @@ $$ \frac{Pr(A, B)}{Pr(B)} = Pr(A \mid B) \tag{K} \label{K} $$
 		* $\frac{Pr(Monday, \, rain)}{Pr(rain)} = Pr(Monday \mid rain)$
 	* We can now see that (4) is equivalent to (1).
 ^
-* 5) $\frac{Pr(Monday \mid rain) \, Pr(rain)}{Pr(Monday)}$
+* 5) $\frac{Pr(Monday \mid rain) \cdot Pr(rain)}{Pr(Monday)}$
 
 	* This has the same structure as (4), but the concepts have switched places.
 	* This implies that (5) is the opposite of (4): _the probability of rain, given that it's Monday_.
